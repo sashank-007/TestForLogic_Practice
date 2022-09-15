@@ -49,9 +49,9 @@ public class BookSuggestionServiceTests
         Book8 = new Book(Author1, RandomAlphabetic(15), RandomAlphabetic(10), Genre.FICTION, 4);
         Book9 = new Book(Author1, RandomAlphabetic(15), RandomAlphabetic(10), Genre.HORROR, 4);
         Book10 = new Book(Author6, RandomAlphabetic(15), RandomAlphabetic(10), Genre.FICTION, 4);
-        Reader1 = new Reader(RandomAge1);
         RandomAge2 = NextInt(0, 120);
         RandomAge1 = NextInt(0, 120);
+        Reader1 = new Reader(RandomAge1);
         Reader2 = new Reader(RandomAge1);
         Reader3 = new Reader(RandomAge2);
     }
@@ -104,7 +104,7 @@ public class BookSuggestionServiceTests
         HashSet<String> suggestedBooks = SuggestionService.SuggestBooks(Reader1, 4);
 
         // then:
-        Assert.Equals(suggestedBooks, new HashSet<string>()
+        Assert.AreEqual(suggestedBooks, new HashSet<string>()
         {
             Book2.Title
         });
@@ -117,7 +117,7 @@ public class BookSuggestionServiceTests
         HashSet<string> suggestedBooks = SuggestionService.SuggestBooks(Reader1);
 
         // then:
-        Assert.Equals(suggestedBooks, new HashSet<string>()
+        Assert.AreEqual(suggestedBooks, new HashSet<string>()
         {
             Book1.Title, Book2.Title,
             Book4.Title
@@ -131,6 +131,6 @@ public class BookSuggestionServiceTests
         HashSet<string> suggestedBooks = SuggestionService.SuggestBooks(Reader1, Author1);
 
         // then:
-        Assert.Equals(suggestedBooks, new HashSet<string>() {Book1.Title, Book2.Title});
+        Assert.AreEqual(suggestedBooks, new HashSet<string>() {Book1.Title, Book2.Title});
     }
 }

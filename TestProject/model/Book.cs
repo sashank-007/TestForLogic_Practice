@@ -10,7 +10,7 @@ public class Book
 
     public Genre Genre { get; set; }
 
-    private int Rating { get; set; }
+    public int Rating { get; set; }
 
     public Book(Author author, string title, string isbn, Genre genre)
     {
