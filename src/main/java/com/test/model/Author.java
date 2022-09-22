@@ -1,4 +1,4 @@
-package com.devskiller.model;
+package com.test.model;
 
 public class Author {
 

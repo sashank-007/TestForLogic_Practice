@@ -1,17 +1,17 @@
-package com.devskiller.services;
+package com.test.services;
 
-import com.devskiller.model.Author;
-import com.devskiller.model.Book;
-import com.devskiller.model.Reader;
+import com.test.model.Author;
+import com.test.model.Book;
+import com.test.model.Reader;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Set;
 
-import static com.devskiller.model.Genre.DRAMA;
-import static com.devskiller.model.Genre.FICTION;
-import static com.devskiller.model.Genre.HORROR;
-import static com.devskiller.model.Genre.ROMANTIC;
+import static com.test.model.Genre.DRAMA;
+import static com.test.model.Genre.FICTION;
+import static com.test.model.Genre.HORROR;
+import static com.test.model.Genre.ROMANTIC;
 import static com.google.common.collect.Sets.newHashSet;
 import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 import static org.apache.commons.lang3.RandomUtils.nextInt;
