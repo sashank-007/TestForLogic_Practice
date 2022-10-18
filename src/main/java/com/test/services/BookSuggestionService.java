@@ -69,6 +69,9 @@ class BookSuggestionService {
 
 
 	Set<String> suggestBooks(Reader reader, int rating) {
+		if (rating > 5 || rating < 1) {
+			throw new IllegalArgumentException();
+		}
 		if (reader != null) {
 			Set<Book> fourPlusRatedFavGenreBooks = new HashSet<>();
 			Set<Genre> favGenres = reader.getFavouriteGenres();
@@ -111,7 +114,7 @@ class BookSuggestionService {
 
 
 	Set<String> suggestBooks(Reader reader, Author author) {
-		if (reader != null) {
+		if (reader != null && author != null) {
 			Set<Book> fourPlusRatedFavGenreAuthorBooks = new HashSet<>();
 			Set<Genre> favGenres = reader.getFavouriteGenres();
 			Set<String> bookSuggest = new HashSet<>();
